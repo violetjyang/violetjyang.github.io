@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://violetjyang.github.io/al-folio/sitemap.xml
+Sitemap: https://violetjyang.github.io/sitemap.xml
