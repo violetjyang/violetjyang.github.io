@@ -9,9 +9,9 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Icahn School of Medicine at Mount Sinai</p>
+    <p>Columbia University</p>
+    <p>New York, NY 10018</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a Clinical Research Coordinator at the Icahn School of Medicine at Mount Sinai within the Department of Psychiatry and the Windreich Department of Artificial Intelligence and Human Health. I currently work under the supervision of Dr. Cheryl Corcoran at the [Language Lab](https://www.cuemountsinai.org/news) and Dr. Baihan Lin at the [Byte of Mind Lab](https://www.byteofmind.com/) where together we leverage natural language processing and other computational methods to study psychological phenomena in psychosis risk. In this role I coordinate the Mount Sinai site for the [Accelerating Medicines Partnership® Schizophrenia (AMP® SCZ)](https://www.ampscz.org/) — the largest international multi-site consortium dedicated to identifying biological, behavioral, and digital markers in youth at clinical high risk for psychosis.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My goal is to become a Computational Clinical Psychologist who uses dynamic systems theory to study the architectures of psychopathology. Through intensive longitudinal methods and mathematical simulations, I aim to map the transdiagnostic feedback loops between stress, affect, social behavior, and clinical symptoms, exploring how these interactive processes give rise to maladaptive states across conditions rather than relying solely on static diagnostic categories.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am also drawn to theory building and the application of generative AI, particularly World Models and Vision Language Models, to deepen our understanding of qualitative experience. How can we quantify internal phenomenology and the human search for meaning? How do these dimensions relate to the self? By bridging computational tools with clinical science, I hope to better articulate the inner lives of individuals across the spectrums of psychosis, depression, and suicide.
