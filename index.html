@@ -8,19 +8,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream: #FAF6F1;
-    --warm-white: #FFFDF9;
-    --terracotta: #C67D5B;
-    --terracotta-light: #D4956F;
-    --terracotta-muted: rgba(198, 125, 91, 0.12);
-    --dusty-rose: #C4928A;
-    --dusty-rose-light: rgba(196, 146, 138, 0.15);
-    --text-primary: #2C2421;
-    --text-secondary: #6B5B54;
-    --text-light: #9A8A82;
-    --border: rgba(198, 125, 91, 0.18);
-    --shadow-soft: 0 2px 20px rgba(44, 36, 33, 0.04);
-    --shadow-hover: 0 4px 30px rgba(198, 125, 91, 0.1);
+    --bg-primary: #F7F6F9;
+    --bg-secondary: #FDFCFE;
+    --lilac: #9B8FB4;
+    --lilac-deep: #7E6FA0;
+    --lilac-muted: rgba(155, 143, 180, 0.12);
+    --lilac-soft: rgba(155, 143, 180, 0.06);
+    --mauve: #B8A9C4;
+    --slate: #4A4458;
+    --text-primary: #2E2A35;
+    --text-secondary: #6E6878;
+    --text-light: #9994A3;
+    --border: rgba(155, 143, 180, 0.18);
+    --shadow-soft: 0 2px 20px rgba(46, 42, 53, 0.04);
+    --shadow-hover: 0 4px 30px rgba(155, 143, 180, 0.12);
     --font-display: 'Cormorant Garamond', Georgia, serif;
     --font-body: 'Nunito Sans', 'Segoe UI', sans-serif;
   }
@@ -34,7 +35,7 @@
 
   body {
     font-family: var(--font-body);
-    background: var(--cream);
+    background: var(--bg-primary);
     color: var(--text-primary);
     font-size: 16px;
     line-height: 1.7;
@@ -48,7 +49,7 @@
     top: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(250, 246, 241, 0.85);
+    background: rgba(247, 246, 249, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
@@ -101,11 +102,11 @@
     left: 0;
     width: 0;
     height: 1.5px;
-    background: var(--terracotta);
+    background: var(--lilac);
     transition: width 0.3s ease;
   }
 
-  nav .nav-links a:hover { color: var(--terracotta); }
+  nav .nav-links a:hover { color: var(--lilac-deep); }
   nav .nav-links a:hover::after { width: 100%; }
 
   .mobile-toggle {
@@ -154,13 +155,10 @@
     width: 240px;
     height: 240px;
     border-radius: 50%;
-    background: var(--dusty-rose-light);
-    border: 3px solid var(--warm-white);
-    box-shadow: 0 8px 40px rgba(198, 125, 91, 0.12);
+    background: var(--lilac-muted);
+    border: 3px solid var(--bg-secondary);
+    box-shadow: 0 8px 40px rgba(155, 143, 180, 0.15);
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .hero-photo img {
@@ -169,16 +167,9 @@
     object-fit: cover;
   }
 
-  .hero-photo .placeholder {
-    font-family: var(--font-display);
-    font-size: 4rem;
-    font-weight: 300;
-    color: var(--dusty-rose);
-  }
-
   .hero-social {
     display: flex;
-    gap: 16px;
+    gap: 14px;
   }
 
   .hero-social a {
@@ -191,13 +182,18 @@
     justify-content: center;
     color: var(--text-secondary);
     text-decoration: none;
-    font-size: 0.75rem;
     transition: all 0.3s ease;
   }
 
+  .hero-social a svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
   .hero-social a:hover {
-    background: var(--terracotta);
-    border-color: var(--terracotta);
+    background: var(--lilac);
+    border-color: var(--lilac);
     color: white;
   }
 
@@ -215,7 +211,7 @@
     font-family: var(--font-display);
     font-size: 1.3rem;
     font-weight: 300;
-    color: var(--terracotta);
+    color: var(--lilac-deep);
     margin-bottom: 6px;
     font-style: italic;
   }
@@ -234,17 +230,6 @@
     max-width: 600px;
   }
 
-  .hero-text .bio a {
-    color: var(--terracotta);
-    text-decoration: none;
-    border-bottom: 1px solid var(--terracotta-muted);
-    transition: border-color 0.3s;
-  }
-
-  .hero-text .bio a:hover {
-    border-bottom-color: var(--terracotta);
-  }
-
   .interests-list {
     display: flex;
     flex-wrap: wrap;
@@ -256,8 +241,8 @@
     font-size: 0.78rem;
     padding: 5px 14px;
     border-radius: 20px;
-    background: var(--terracotta-muted);
-    color: var(--terracotta);
+    background: var(--lilac-muted);
+    color: var(--lilac-deep);
     font-weight: 400;
     letter-spacing: 0.02em;
   }
@@ -289,46 +274,11 @@
     left: 0;
     width: 40px;
     height: 2px;
-    background: var(--terracotta);
+    background: var(--lilac);
   }
 
   section:nth-child(even) {
-    background: var(--warm-white);
-  }
-
-  /* ── RESEARCH ── */
-  .research-item {
-    margin-bottom: 40px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .research-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  .research-item h3 {
-    font-family: var(--font-display);
-    font-size: 1.35rem;
-    font-weight: 500;
-    color: var(--text-primary);
-    margin-bottom: 8px;
-  }
-
-  .research-item .research-role {
-    font-size: 0.85rem;
-    color: var(--terracotta);
-    font-weight: 400;
-    margin-bottom: 12px;
-  }
-
-  .research-item p {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
-    max-width: 720px;
+    background: var(--bg-secondary);
   }
 
   /* ── PUBLICATIONS ── */
@@ -336,13 +286,13 @@
     margin-bottom: 28px;
     padding: 24px 28px;
     border-radius: 12px;
-    background: var(--cream);
+    background: var(--bg-primary);
     border: 1px solid var(--border);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
 
   section:nth-child(even) .pub-item {
-    background: rgba(250, 246, 241, 0.6);
+    background: rgba(247, 246, 249, 0.6);
   }
 
   .pub-item:hover {
@@ -385,7 +335,7 @@
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--terracotta);
+    color: var(--lilac-deep);
     text-decoration: none;
     font-weight: 600;
     transition: opacity 0.3s;
@@ -433,12 +383,12 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: var(--terracotta);
-    border: 2px solid var(--cream);
+    background: var(--lilac);
+    border: 2px solid var(--bg-primary);
   }
 
   section:nth-child(even) .edu-item::before {
-    border-color: var(--warm-white);
+    border-color: var(--bg-secondary);
   }
 
   .edu-item .edu-degree {
@@ -450,20 +400,13 @@
 
   .edu-item .edu-school {
     font-size: 0.92rem;
-    color: var(--terracotta);
+    color: var(--lilac-deep);
     margin-bottom: 2px;
   }
 
   .edu-item .edu-year {
     font-size: 0.82rem;
     color: var(--text-light);
-  }
-
-  .edu-item .edu-note {
-    font-size: 0.88rem;
-    color: var(--text-secondary);
-    margin-top: 6px;
-    line-height: 1.7;
   }
 
   /* ── CONTACT ── */
@@ -497,25 +440,29 @@
     transition: color 0.3s;
   }
 
-  .contact-links a:hover { color: var(--terracotta); }
+  .contact-links a:hover { color: var(--lilac-deep); }
 
   .contact-links .icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: var(--terracotta-muted);
+    background: var(--lilac-muted);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
-    color: var(--terracotta);
-    font-weight: 600;
+    color: var(--lilac-deep);
     flex-shrink: 0;
     transition: all 0.3s;
   }
 
+  .contact-links .icon svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
   .contact-links a:hover .icon {
-    background: var(--terracotta);
+    background: var(--lilac);
     color: white;
   }
 
@@ -540,12 +487,10 @@
     transform: translateY(0);
   }
 
-  /* stagger children */
   .stagger > .reveal:nth-child(1) { transition-delay: 0s; }
   .stagger > .reveal:nth-child(2) { transition-delay: 0.08s; }
   .stagger > .reveal:nth-child(3) { transition-delay: 0.16s; }
   .stagger > .reveal:nth-child(4) { transition-delay: 0.24s; }
-  .stagger > .reveal:nth-child(5) { transition-delay: 0.32s; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 800px) {
@@ -556,17 +501,10 @@
     }
 
     .hero-photo-col { order: -1; }
-
-    .hero-text .bio,
-    .research-item p { max-width: 100%; }
-
+    .hero-text .bio { max-width: 100%; }
     .interests-list { justify-content: center; }
-
     .hero-text h1 { font-size: 2.4rem; }
-
-    .contact-grid {
-      grid-template-columns: 1fr;
-    }
+    .contact-grid { grid-template-columns: 1fr; }
 
     nav .nav-links { display: none; }
     nav .nav-links.open {
@@ -576,7 +514,7 @@
       top: 64px;
       left: 0;
       right: 0;
-      background: rgba(250, 246, 241, 0.97);
+      background: rgba(247, 246, 249, 0.97);
       backdrop-filter: blur(20px);
       padding: 24px 40px;
       gap: 20px;
@@ -598,9 +536,9 @@
     </button>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="https://docs.google.com/document/d/YOUR_CV_LINK" target="_blank">CV</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -611,16 +549,24 @@
   <div class="hero-inner">
     <div class="hero-photo-col reveal">
       <div class="hero-photo">
-        <!-- Replace src with your photo -->
-        <span class="placeholder">VY</span>
-        <!-- <img src="your-photo.jpg" alt="Violet J. Yang"> -->
+        <img src="myphoto.jpg" alt="Violet J. Yang">
       </div>
       <div class="hero-social">
-        <a href="mailto:your-email@smu.edu" title="Email">✉</a>
-        <a href="https://github.com/violetjyang" title="GitHub">GH</a>
-        <a href="https://twitter.com/yourhandle" title="X / Twitter">X</a>
-        <a href="https://bsky.app/profile/yourhandle" title="Bluesky">BS</a>
-        <a href="https://scholar.google.com/" title="Google Scholar">GS</a>
+        <a href="mailto:violety@smu.edu" title="Email">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a href="https://github.com/violetjyang" title="GitHub" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://x.com/VioletJYang" title="X / Twitter" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://bsky.app/profile/violetyang.bsky.social" title="Bluesky" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.627 3.588 3.476 6.182 3.13-4.39.588-8.31 2.37-4.97 8.387C5.084 27.14 11.28 21.296 12 17.16c.72 4.136 6.479 9.541 10.164 4.604 3.34-6.017-.58-7.799-4.97-8.386 2.594.346 5.397-.504 6.182-3.131.246-.828.624-5.79.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.3-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/violet-yang/" title="LinkedIn" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
       </div>
     </div>
     <div class="hero-text">
@@ -628,13 +574,11 @@
       <div class="subtitle reveal">Incoming Clinical Psychology PhD Student</div>
       <div class="affiliation reveal">Southern Methodist University</div>
       <div class="bio reveal">
-        <!-- EDIT YOUR BIO HERE -->
-        I am an incoming Clinical Psychology PhD student at
-        <a href="https://www.smu.edu/" target="_blank">Southern Methodist University</a>.
+        I am an incoming Clinical Psychology PhD student at Southern Methodist University.
         My research integrates computational and quantitative methods with clinical science
         to advance understanding of psychopathology. I am particularly interested in using
         dynamic systems theory, intensive longitudinal methods, and generative AI to study
-        the architecture of mental health conditions and quantify internal phenomenology.
+        the dimensional structure of psychopathology and the prediction and prevention of suicide.
       </div>
       <div class="interests-list reveal">
         <span>Dynamic Systems</span>
@@ -643,39 +587,9 @@
         <span>Transdiagnostic Feedback Loops</span>
         <span>Generative AI</span>
         <span>World Models &amp; VLMs</span>
-        <span>Computational Psychiatry</span>
+        <span>Dimensional Psychopathology</span>
+        <span>Suicide Prevention</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESEARCH -->
-<section id="research">
-  <div class="section-inner">
-    <h2 class="section-title reveal">Research</h2>
-    <div class="stagger">
-
-      <div class="research-item reveal">
-        <h3>Accelerating Medicines Partnership — Schizophrenia (AMP SCZ)</h3>
-        <div class="research-role">Clinical Research Coordinator · Mount Sinai (2023–2025)</div>
-        <p>
-          <!-- EDIT: describe your AMP SCZ work -->
-          Coordinated the Mount Sinai site for this large international multi-site consortium
-          focused on identifying biological, behavioral, and digital markers in youth at
-          clinical high risk for psychosis. Leveraged NLP and computational methods to study
-          linguistic markers associated with psychosis risk.
-        </p>
-      </div>
-
-      <div class="research-item reveal">
-        <h3>Your Next Research Area</h3>
-        <div class="research-role">Role · Institution</div>
-        <p>
-          <!-- EDIT: add more research experiences -->
-          Description of your research work goes here.
-        </p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -686,10 +600,9 @@
     <h2 class="section-title reveal">Publications</h2>
     <div class="stagger">
 
-      <!-- EXAMPLE PUB — duplicate and edit as needed -->
-      <!--
+      <!-- TEMPLATE — duplicate and edit for each pub:
       <div class="pub-item reveal">
-        <div class="pub-authors"><strong>Yang, V.J.</strong>, Lin, B., Corcoran, C.</div>
+        <div class="pub-authors"><strong>Yang, V.J.</strong>, Author, B., Author, C.</div>
         <div class="pub-title">Your paper title here.</div>
         <div class="pub-venue">Journal Name, Year.</div>
         <div class="pub-links">
@@ -716,15 +629,19 @@
       <div class="edu-item reveal">
         <div class="edu-degree">Ph.D. in Clinical Psychology</div>
         <div class="edu-school">Southern Methodist University</div>
-        <div class="edu-year">Starting Fall 2025</div>
-        <!-- <div class="edu-note">Advisor: Dr. ___</div> -->
+        <div class="edu-year">Starting Fall 2026</div>
       </div>
 
       <div class="edu-item reveal">
-        <div class="edu-degree">B.A. in Your Major</div>
-        <div class="edu-school">Your Undergraduate Institution</div>
-        <div class="edu-year">Year</div>
-        <!-- <div class="edu-note">Honors, minors, etc.</div> -->
+        <div class="edu-degree">M.A. in Clinical Psychology</div>
+        <div class="edu-school">Teachers College, Columbia University</div>
+        <div class="edu-year">2023 – 2025</div>
+      </div>
+
+      <div class="edu-item reveal">
+        <div class="edu-degree">B.A. in Psychological Science &amp; Criminology, Law, and Society</div>
+        <div class="edu-school">University of California, Irvine</div>
+        <div class="edu-year">2019 – 2023</div>
       </div>
 
     </div>
@@ -739,22 +656,33 @@
       <div class="contact-text">
         <p>
           I'm always happy to connect with others interested in computational approaches
-          to clinical psychology. Feel free to reach out about research, collaboration,
-          or just to say hello.
+          to clinical psychology.
         </p>
       </div>
       <div class="contact-links">
-        <a href="mailto:your-email@smu.edu">
-          <span class="icon">✉</span>
-          your-email@smu.edu
+        <a href="mailto:violety@smu.edu">
+          <span class="icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </span>
+          violety@smu.edu
         </a>
-        <a href="https://github.com/violetjyang" target="_blank">
-          <span class="icon">GH</span>
-          github.com/violetjyang
+        <a href="https://x.com/VioletJYang" target="_blank">
+          <span class="icon">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </span>
+          @VioletJYang
         </a>
-        <a href="https://twitter.com/yourhandle" target="_blank">
-          <span class="icon">X</span>
-          @yourhandle
+        <a href="https://bsky.app/profile/violetyang.bsky.social" target="_blank">
+          <span class="icon">
+            <svg viewBox="0 0 24 24"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.627 3.588 3.476 6.182 3.13-4.39.588-8.31 2.37-4.97 8.387C5.084 27.14 11.28 21.296 12 17.16c.72 4.136 6.479 9.541 10.164 4.604 3.34-6.017-.58-7.799-4.97-8.386 2.594.346 5.397-.504 6.182-3.131.246-.828.624-5.79.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.3-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>
+          </span>
+          @violetyang.bsky.social
+        </a>
+        <a href="https://www.linkedin.com/in/violet-yang/" target="_blank">
+          <span class="icon">
+            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </span>
+          LinkedIn
         </a>
       </div>
     </div>
@@ -762,27 +690,22 @@
 </section>
 
 <footer>
-  <p>&copy; 2025 Violet J. Yang · Built with care</p>
+  <p>&copy; 2025 Violet J. Yang</p>
 </footer>
 
 <script>
-  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
   }, { threshold: 0.12 });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Nav shadow on scroll
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
   });
 
-  // Close mobile nav on link click
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       document.querySelector('.nav-links').classList.remove('open');
